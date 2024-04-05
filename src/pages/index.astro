@@ -1,0 +1,97 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import Article from "../assets/article.svg";
+import Avatar from "../assets/image-avatar.webp";
+---
+
+<MainLayout>
+  <div class='wrapper'>
+    <Image
+      class='article'
+      src={Article}
+      alt='article'
+      width={336}
+      height={201}
+    />
+    <div class='wrapper-cont'>
+      <h5 class='topic'>Learning</h5>
+      <p class='date'>Published 21 Dec 23</p>
+      <h3 class='title'>HTML & CSS foundations</h3>
+      <p class='desc'>
+        These languages are the backbone of every website, defining structure,
+        content, and presentation.
+      </p>
+      <div class='author'>
+        <Image class='avatar' src={Avatar} alt='Avatar Picture' />
+        <h4 class='author-name'>Greg Hooper</h4>
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .wrapper {
+    width: 375px;
+    height: 575px;
+    margin: auto;
+    border-radius: var(--border-rounded);
+    background-color: var(--neutral-clr__White);
+    border: 1px solid var(--neutral-clr__Black);
+    box-shadow: 7px 7px 0 var(--neutral-clr__Black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+  }
+
+  .article {
+    max-width: 100%;
+    margin-block: 0.5rem;
+    border-radius: var(--border-rounded);
+  }
+  .wrapper-cont {
+    width: 330px;
+  }
+
+  .topic {
+    width: fit-content;
+    padding: 0.3rem;
+    padding-inline: 0.8rem;
+    border-radius: 5px;
+    font-weight: var(--fw-800);
+    background-color: var(--primary-clr__Yellow);
+  }
+
+  .date {
+    font-weight: var(--fw-500);
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-weight: var(--fw-800);
+    font-size: 1.4rem;
+    word-spacing: -5px;
+  }
+
+  .desc {
+    color: var(--neutral-clr__Gray);
+    line-height: 1.5;
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .author-name {
+    font-weight: var(--fw-800);
+  }
+</style>

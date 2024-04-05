@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Blog Preview Card</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css'
+  @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+  :root {
+    --primary-clr__Yellow: hsl(47, 88%, 63%);
+    --neutral-clr__White: hsl(0, 0%, 100%);
+    --neutral-clr__Gray: hsl(0, 0%, 50%);
+    --neutral-clr__Black: hsl(0, 0%, 7%);
+    --ff-figtree: "Figtree", sans-serif;
+    --fs-body__paragraph: 16px;
+    --fw-500: 500;
+    --fw-800: 800;
+    --border-rounded: 15px
+  }
+  body {
+    font-family: var(--ff-figtree);
+    background-color: var(--primary-clr__Yellow);
+  }
+  p {
+    font-size: var(--fs-body__paragraph);
+  }
+</style>
